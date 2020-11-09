@@ -59,7 +59,7 @@
                                 class="small-icon small-icon--chek"></span>
                                 <div class="span-mobile">
                                     <p>Выберите язык:</p>
-                                    <span>Ru</span>
+                                    <span class="is-active">Ru</span>
                                     <span>En</span>
                                     <span>Kz</span>
                                     </div></div>
@@ -71,7 +71,7 @@
                 <div class="header_body">
                     <p>
                     <h5>Город Нур-Султан | 17 Мая 2019</h5>
-                    <h3>Третий ежегодный Казахстанский круглый стол
+                    <h3>III ежегодный </br>Казахстанский круглый стол
                         по глобальным инвестициям</h3>
                     </p>
                     <p>
@@ -96,113 +96,103 @@
 </section>
     
 
-
-
-
 <section class="spiker">
     <div class="container">
         <h2>Главные спикеры</h2>
         <div class="row">
-            <div class="col-lg-2 col-6">
+    <div id="owl-carousel_2" class="owl-carousel spikers owl-theme">
+        <div class="item">
 
-                <div class="spiker__item">
-                    <img src="/img/img1.png" alt="">
-                    <p class="spiker__title">Аскар Мамин
-                    </p>
-                    <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
+            <div class="spiker__item">
+                <img src="/img/img1.png" alt="">
+                <p class="spiker__title">Аскар Мамин
+                </p>
+                <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
 
-
-                </div>
-
-                
 
             </div>
-
-            <div class="col-lg-2 col-6">
-
-                <div class="spiker__item">
-                    <img src="/img/jk.png" alt="">
-                    <p class="spiker__title">Аскар Мамин
-                    </p>
-                    <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
-
-
-                </div>
-
-                
-
-            </div>
-
-
-            <div class="col-lg-2">
-
-                <div class="spiker__item">
-                    <img src="/img/ba.png" alt="">
-                    <p class="spiker__title">Аскар Мамин
-                    </p>
-                    <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
-
-
-                </div>
-
-                
-
-            </div>
-
-
-            <div class="col-lg-2">
-
-                <div class="spiker__item">
-                    <img src="/img/kb.png" alt="">
-                    <p class="spiker__title">Аскар Мамин
-                    </p>
-                    <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
-
-
-                </div>
-
-                
-
-            </div>
-
-
-            <div class="col-lg-2">
-
-                <div class="spiker__item">
-                    <img src="/img/ap.png" alt="">
-                    <p class="spiker__title">Аскар Мамин
-                    </p>
-                    <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
-
-
-                </div>
-
-                
-
-            </div>
-
-
-            <div class="col-lg-2">
-
-                <div class="spiker__item">
-                    <img src="/img/ms.png" alt="">
-                    <p class="spiker__title">Аскар Мамин
-                    </p>
-                    <div class="spiker__desc">Премьер-Министр Республики Казахстан</div>
-
-
-                </div>
-
-                
-
-            </div>
-
 
             
-            
+
         </div>
+
+        <div class="item">
+
+            <div class="spiker__item">
+                <img src="/img/jk.png" alt="">
+                <p class="spiker__title">Аскар Мамин
+                </p>
+                <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
+
+
+            </div>
+
+            
+
+        </div>
+        <div class="item">
+
+            <div class="spiker__item">
+                <img src="/img/ba.png" alt="">
+                <p class="spiker__title">Аскар Мамин
+                </p>
+                <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
+
+
+            </div>
+
+            
+
+        </div>
+        <div class="item">
+
+            <div class="spiker__item">
+                <img src="/img/kb.png" alt="">
+                <p class="spiker__title">Аскар Мамин
+                </p>
+                <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
+
+
+            </div>
+
+            
+
+        </div>
+        <div class="item">
+
+            <div class="spiker__item">
+                <img src="/img/ap.png" alt="">
+                <p class="spiker__title">Аскар Мамин
+                </p>
+                <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
+
+
+            </div>
+
+            
+
+        </div>
+        <div class="item">
+
+            <div class="spiker__item">
+                <img src="/img/ms.png" alt="">
+                <p class="spiker__title">Аскар Мамин
+                </p>
+                <p class="spiker__desc">Премьер-Министр Республики Казахстан</p>
+
+
+            </div>
+
+            
+
+        </div>
+        
     </div>
-</section>
+    </div>
+    </div>
+    </section>
+
+
     <section class="organizator">
     <div class="container">
         <h2>Организаторы</h2>
@@ -558,6 +548,17 @@ $(document).ready(function(){
     
 })
 });
+
+
+
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 50) {
+        $('.header_small').addClass('header_small--fixed');
+    } else {
+        $('.header_small').removeClass('header_small--fixed');
+    }
+});
 </script>
 
 
@@ -566,67 +567,135 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-    $(window).resize(function() {
-        if ( $(window).width() > 575 ) {
-            startCarousel();
-            $('#owl-carousel_2 .owl-item').addClass('col-lg-2');
-        } else {
-            stopCarousel();
-            $('#owl-carousel_2 .owl-item').removeClass('col-lg-2');
+// $(document).ready(function(){
+//     $(window).resize(function() {
+//         if ( $(window).width() > 575 ) {
+//             startCarousel();
+//             $('#owl-carousel_2 .owl-item').addClass('col-lg-2');
+//         } else {
+//             stopCarousel();
+//             $('#owl-carousel_2 .owl-item').removeClass('col-lg-2');
+//         }
+//     });
+// })
+
+
+
+function owlInitialize() {
+if ($(window).width() < 1280) {
+    $('.spikers').addClass("owl-carousel");
+    $('.owl-carousel').owlCarousel({
+      
+        margin: 5, 
+        loop: true, 
+        nav: true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        dots: false,        
+        responsive:{
+            0:{
+                items:1,
+                stagePadding: 90           
+            },
+            480:{
+                items:1,
+                stagePadding: 100           
+            },
+            640:{
+                items:5, 
+                stagePadding: 100          
+            }, 
+            1000:{
+                items:6,                
+            }
         }
     });
-})
-
-$(document).ready(function(){
-    $('#owl-carousel_2').owlCarousel({
-        loop:true,
-        margin:10,
-        nav: true,
-        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-        responsive:{
-            0:{
-                items:5,
-                nav:false
-            },
-            600:{
-                items:5,
-                nav:false
-            },
-            1000:{
-                items:5
-            }
-        }
-    })
+}else{
+    $('.owl-carousel').owlCarousel('destroy');
+    $('.spikers').removeClass("owl-carousel");
+}
+}
+$(document).ready(function(e) {
+owlInitialize();
+});
+$(window).resize(function() {
+owlInitialize();
 });
 
-//start
-function startCarousel() {
-    $('#owl-carousel_2').owlCarousel({
-        loop:true,
-        margin:10,
-        nav: true,
-        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-        responsive:{
-            0:{
-                items:5
-            },
-            600:{
-                items:5
-            },
-            1000:{
-                items:5
-            }
-        }
-    })
-}
+
+
+
+// $(document).ready(function() {
+//   if ( $(window).width() < 400 ) {
+//     startCarousel();
+//   } else {
+//     $('.spikers').addClass('off');
+//   }
+// });
+
+// $(window).resize(function() {
+//     if ( $(window).width() < 400 ) {
+//       startCarousel();
+//     } else {
+//       stopCarousel();
+//     }
+// });
+
+
+// function stopCarousel() {
+//   var owl = $('.spikers');
+//   owl.trigger('destroy.owl.carousel');
+//   owl.addClass('off');
+// }
+
+// $(document).ready(function(){
+//     $('#owl-carousel_2').owlCarousel({
+//         loop:true,
+//         margin:10,
+//         nav: true,
+//         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+//         responsive:{
+//             0:{
+//                 items:5,
+//                 nav:false
+//             },
+//             600:{
+//                 items:5,
+//                 nav:false
+//             },
+//             1000:{
+//                 items:5
+//             }
+//         }
+//     })
+// });
+
+// //start
+// function startCarousel() {
+//     $('#owl-carousel_2').owlCarousel({
+//         loop:true,
+//         margin:10,
+//         nav: true,
+//         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+//         responsive:{
+//             0:{
+//                 items:5
+//             },
+//             600:{
+//                 items:5
+//             },
+//             1000:{
+//                 items:5
+//             }
+//         }
+//     })
+// }
 
 //stop
-function stopCarousel() {
-    var owl = $('.owl-carousel');
-    owl.trigger('destroy.owl.carousel');
-    owl.addClass('off');
-}
+// function stopCarousel() {
+//     var owl = $('.owl-carousel');
+//     owl.trigger('destroy.owl.carousel');
+//     owl.addClass('off');
+// }
 
 
 // var res = $(".header-right");

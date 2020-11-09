@@ -1,48 +1,34 @@
+.owl-stage {
+  &:first-child {
+    left: -100px;
+  }
+}
 
-
-
-.owl-carousel .nav-btn{
-    height: 60px;
-    position: absolute;
-    width: 40px;
-    cursor: pointer;
-    top: 40%;
+.owl-carousel .nav-btn {
+  height: 60px;
+  position: absolute;
+  width: 40px;
+  cursor: pointer;
+  top: 40%;
 }
 
 .owl-carousel .owl-prev.disabled,
-.owl-carousel .owl-next.disabled{
+.owl-carousel .owl-next.disabled {
   pointer-events: none;
   opacity: 0.2;
 }
 
-.owl-carousel .prev-slide{
-    background: url('/img/back.png') no-repeat;
-    left: -45px;
+.owl-carousel .prev-slide {
+  background: url("/img/back.png") no-repeat;
+  left: -45px;
 }
-.owl-carousel .next-slide{
-    background: url('/img/next.png') no-repeat;
-    right: -50px;
+.owl-carousel .next-slide {
+  background: url("/img/next.png") no-repeat;
+  right: -50px;
 }
-.owl-carousel .prev-slide:hover{
-    background: url('/img/back-color.svg') no-repeat;
+.owl-carousel .prev-slide:hover {
+  background: url("/img/back-color.svg") no-repeat;
 }
-.owl-carousel .next-slide:hover{
-    background: url('/img/next-color.svg') no-repeat;
-}
-
-span.img-text {
-  text-decoration: none;
-  outline: none;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  cursor: pointer;
-  width: 100%;
-  font-size: 23px;
-  display: block;
-  text-transform: capitalize;
-}
-span.img-text:hover {
-  color: #2caae1;
+.owl-carousel .next-slide:hover {
+  background: url("/img/next-color.svg") no-repeat;
 }

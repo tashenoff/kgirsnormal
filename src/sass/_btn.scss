@@ -1,13 +1,13 @@
-.btn{
-    display: inline-block;
-  margin-bottom: 0; 
-//   font-weight: $btn-font-weight;
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  //   font-weight: $btn-font-weight;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
-  background-image: none; 
+  background-image: none;
   border: 1px solid transparent;
   padding: 15px 30px;
   text-transform: uppercase;
@@ -16,43 +16,31 @@
   font-weight: bold;
   cursor: pointer;
 
-
-
   span.icon {
-    background: url('/img/arrow-down.svg') no-repeat;
+    background: url("/img/arrow-down.svg") no-repeat;
     float: left;
     width: 20px;
     height: 20px;
     margin-right: 8px;
+  }
 }
 
+.btn-primary {
+  background-color: $secondary;
+  border-radius: 25px;
+  transition: background-color 0.5s ease;
 
-}
-
-
-.btn-primary{
-    background-color: $secondary;
-    border-radius: 25px;
-    transition: background-color 0.5s ease;
-
-    &--small{
+  &--small {
     @extend .btn;
-      @media screen and (max-width: 600px) {
-        display: block;
-      }
-    }
 
-    &:hover{
-     
-        background-color: darken($secondary, 10%);
-    
-    
+    @media screen and (max-width: 600px) {
+      display: block;
+      padding: 20px 20px 20px 4px;
+      text-align: center;
     }
+  }
+
+  &:hover {
+    background-color: darken($secondary, 10%);
+  }
 }
-
-
-
-
-
-
-

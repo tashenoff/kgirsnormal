@@ -48,6 +48,17 @@ $(document).ready(function(){
     
 })
 });
+
+
+
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 50) {
+        $('.header_small').addClass('header_small--fixed');
+    } else {
+        $('.header_small').removeClass('header_small--fixed');
+    }
+});
 </script>
 
 
@@ -56,67 +67,135 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
-    $(window).resize(function() {
-        if ( $(window).width() > 575 ) {
-            startCarousel();
-            $('#owl-carousel_2 .owl-item').addClass('col-lg-2');
-        } else {
-            stopCarousel();
-            $('#owl-carousel_2 .owl-item').removeClass('col-lg-2');
+// $(document).ready(function(){
+//     $(window).resize(function() {
+//         if ( $(window).width() > 575 ) {
+//             startCarousel();
+//             $('#owl-carousel_2 .owl-item').addClass('col-lg-2');
+//         } else {
+//             stopCarousel();
+//             $('#owl-carousel_2 .owl-item').removeClass('col-lg-2');
+//         }
+//     });
+// })
+
+
+
+function owlInitialize() {
+if ($(window).width() < 1280) {
+    $('.spikers').addClass("owl-carousel");
+    $('.owl-carousel').owlCarousel({
+      
+        margin: 5, 
+        loop: true, 
+        nav: true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        dots: false,        
+        responsive:{
+            0:{
+                items:1,
+                stagePadding: 90           
+            },
+            480:{
+                items:1,
+                stagePadding: 100           
+            },
+            640:{
+                items:5, 
+                stagePadding: 100          
+            }, 
+            1000:{
+                items:6,                
+            }
         }
     });
-})
-
-$(document).ready(function(){
-    $('#owl-carousel_2').owlCarousel({
-        loop:true,
-        margin:10,
-        nav: true,
-        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-        responsive:{
-            0:{
-                items:5,
-                nav:false
-            },
-            600:{
-                items:5,
-                nav:false
-            },
-            1000:{
-                items:5
-            }
-        }
-    })
+}else{
+    $('.owl-carousel').owlCarousel('destroy');
+    $('.spikers').removeClass("owl-carousel");
+}
+}
+$(document).ready(function(e) {
+owlInitialize();
+});
+$(window).resize(function() {
+owlInitialize();
 });
 
-//start
-function startCarousel() {
-    $('#owl-carousel_2').owlCarousel({
-        loop:true,
-        margin:10,
-        nav: true,
-        navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
-        responsive:{
-            0:{
-                items:5
-            },
-            600:{
-                items:5
-            },
-            1000:{
-                items:5
-            }
-        }
-    })
-}
+
+
+
+// $(document).ready(function() {
+//   if ( $(window).width() < 400 ) {
+//     startCarousel();
+//   } else {
+//     $('.spikers').addClass('off');
+//   }
+// });
+
+// $(window).resize(function() {
+//     if ( $(window).width() < 400 ) {
+//       startCarousel();
+//     } else {
+//       stopCarousel();
+//     }
+// });
+
+
+// function stopCarousel() {
+//   var owl = $('.spikers');
+//   owl.trigger('destroy.owl.carousel');
+//   owl.addClass('off');
+// }
+
+// $(document).ready(function(){
+//     $('#owl-carousel_2').owlCarousel({
+//         loop:true,
+//         margin:10,
+//         nav: true,
+//         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+//         responsive:{
+//             0:{
+//                 items:5,
+//                 nav:false
+//             },
+//             600:{
+//                 items:5,
+//                 nav:false
+//             },
+//             1000:{
+//                 items:5
+//             }
+//         }
+//     })
+// });
+
+// //start
+// function startCarousel() {
+//     $('#owl-carousel_2').owlCarousel({
+//         loop:true,
+//         margin:10,
+//         nav: true,
+//         navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+//         responsive:{
+//             0:{
+//                 items:5
+//             },
+//             600:{
+//                 items:5
+//             },
+//             1000:{
+//                 items:5
+//             }
+//         }
+//     })
+// }
 
 //stop
-function stopCarousel() {
-    var owl = $('.owl-carousel');
-    owl.trigger('destroy.owl.carousel');
-    owl.addClass('off');
-}
+// function stopCarousel() {
+//     var owl = $('.owl-carousel');
+//     owl.trigger('destroy.owl.carousel');
+//     owl.addClass('off');
+// }
 
 
 // var res = $(".header-right");
