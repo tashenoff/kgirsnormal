@@ -1,0 +1,21 @@
+footer{
+    background-color: $blue;
+    width: 100%;
+    color: #fff;
+
+    span{
+        margin-right: 16px;
+    }
+    
+}
+
+.footer-wrapper{
+    height: 57px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+    }
+}
