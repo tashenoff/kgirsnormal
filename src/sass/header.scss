@@ -19,7 +19,7 @@
   position: relative;
 
   &::before {
-    background: transparentize($blue, 0.4);
+    background: transparentize(#000000, 0.5);
     position: absolute;
 
     content: "";
@@ -43,7 +43,7 @@
   align-items: center;
   padding: 18px;
   color: #000;
-  z-index: 9999999;
+  z-index: 666;
 
   &--fixed {
     position: fixed;

@@ -9,6 +9,8 @@
 <link rel="preload" href="/css/app.css" as="style" />
 <link rel="stylesheet" href="/css/libs.min.css" />
 <link rel="stylesheet" href="/css/app.css" />
+
+
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" /> -->
 
@@ -301,57 +303,57 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="section-info__item">
+                <a href="test.html" class="section-info__item simple-ajax-popup-align-top">
                     <div class="section-info__icon"><img src="/img/message1.svg" alt=""></div>
                     <div class="section-info__desc">Общая информация
                     </div>
-                </div>
+                </a>
             </div>
 
 
             <div class="col-lg-4">
-                <div class="section-info__item">
-                    <div class="section-info__icon"><img src="/img/paper_1.svg" alt=""></div>
+                <a href="merop.html" class="section-info__item simple-ajax-popup-align-top">
+                    <div class="section-info__icon"><img src="/img/message1.svg" alt=""></div>
                     <div class="section-info__desc">Программа
-
                     </div>
-                </div>
+                </a>
+            </div>
+        
+
+
+            <div class="col-lg-4">
+                <a href="test.html" class="section-info__item simple-ajax-popup-align-top">
+                    <div class="section-info__icon"><img src="/img/message1.svg" alt=""></div>
+                    <div class="section-info__desc">Общая информация
+                    </div>
+                </a>
             </div>
 
 
             <div class="col-lg-4">
-                <div class="section-info__item">
-                    <div class="section-info__icon"><img src="/img/brainstorming_1.svg" alt=""></div>
+                <a href="test.html" class="section-info__item simple-ajax-popup-align-top">
+                    <div class="section-info__icon"><img src="/img/message1.svg" alt=""></div>
                     <div class="section-info__desc">Общая информация
                     </div>
-                </div>
+                </a>
             </div>
 
 
             <div class="col-lg-4">
-                <div class="section-info__item">
-                    <div class="section-info__icon"><img src="/img/meeting_1.svg" alt=""></div>
+                <a href="test.html" class="section-info__item simple-ajax-popup-align-top">
+                    <div class="section-info__icon"><img src="/img/message1.svg" alt=""></div>
                     <div class="section-info__desc">Общая информация
                     </div>
-                </div>
+                </a>
             </div>
 
 
             <div class="col-lg-4">
-                <div class="section-info__item">
-                    <div class="section-info__icon"><img src="/img/location_1.svg" alt=""></div>
+                <a href="test.html" class="section-info__item simple-ajax-popup-align-top">
+                    <div class="section-info__icon"><img src="/img/message1.svg" alt=""></div>
                     <div class="section-info__desc">Общая информация
                     </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4">
-                <div class="section-info__item">
-                    <div class="section-info__icon"><img src="/img/email_1.svg" alt=""></div>
-                    <div class="section-info__desc">Общая информация
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -516,9 +518,25 @@
 <script defer src="/js/app.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 
 <script>
+
+$(document).ready(function($) {
+
+$('.simple-ajax-popup-align-top').magnificPopup({
+    type: 'ajax',
+    alignTop: true,
+    overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+});
+
+$('.simple-ajax-popup').magnificPopup({
+    type: 'ajax'
+});
+
+});
 
 
 
@@ -548,7 +566,6 @@ $(document).ready(function(){
     
 })
 });
-
 
 
 
@@ -735,6 +752,8 @@ $('.hamburger').click(function(e){
     e.preventDefault();
     $(this).toggleClass('is-active');
 });
+
+
 
 </script>
 

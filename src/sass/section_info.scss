@@ -1,44 +1,5 @@
 .section-info {
-  background: linear-gradient(312deg, #0e66d0, #80b5f5);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite;
-
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 0% 86%;
-    }
-    50% {
-      background-position: 100% 15%;
-    }
-    100% {
-      background-position: 0% 86%;
-    }
-  }
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 0% 86%;
-    }
-    50% {
-      background-position: 100% 15%;
-    }
-    100% {
-      background-position: 0% 86%;
-    }
-  }
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 86%;
-    }
-    50% {
-      background-position: 100% 15%;
-    }
-    100% {
-      background-position: 0% 86%;
-    }
-  }
+  background-color: #3378cb;
 
   height: 281px;
   margin-top: 50px;
@@ -57,16 +18,15 @@
   &__item {
     text-align: center;
     display: flex;
-    background-color: lighten($blue, 20%);
+    background-color: #2b6dbb;
     padding: 20px;
     margin: 16px 0px;
     line-height: 2.6;
     border-radius: 8px;
     transition: background-color 0.3s ease;
-    border: 2px solid lighten($blue, 35%);
 
     &:hover {
-      background-color: lighten($blue, 40%);
+      background-color: #2461b1;
       cursor: pointer;
     }
   }

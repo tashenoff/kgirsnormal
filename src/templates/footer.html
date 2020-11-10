@@ -9,16 +9,32 @@
   
 </footer>
 
-{% include './modals.html' %}
+
 
 
 <script defer src="/js/libs.min.js"></script>
 <script defer src="/js/app.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 
 
 <script>
+
+$(document).ready(function($) {
+
+$('.simple-ajax-popup-align-top').magnificPopup({
+    type: 'ajax',
+    alignTop: true,
+    overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+});
+
+$('.simple-ajax-popup').magnificPopup({
+    type: 'ajax'
+});
+
+});
 
 
 
@@ -48,7 +64,6 @@ $(document).ready(function(){
     
 })
 });
-
 
 
 
@@ -236,4 +251,7 @@ $('.hamburger').click(function(e){
     $(this).toggleClass('is-active');
 });
 
+
+
 </script>
+{% include './modals.html' %}

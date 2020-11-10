@@ -1,19 +1,18 @@
 $black: #231f20;
 $orange: #f7941f;
-$secondary: #FBC54C;
-$blue: #083162;
-$blue-2: #3378CB;
+$secondary: #fbc54c;
+$blue: #2b6dbb;
+$blue-2: #3378cb;
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
-body{
-    font-family: 'Noto Sans', sans-serif;
+body {
+  font-family: "Noto Sans", sans-serif;
 }
 
 @media screen and (max-width: 600px) {
-    h2{
-        text-align: center;
-        font-size: 23px;
-    }
+  h2 {
+    text-align: center;
+    font-size: 23px;
+  }
 }
