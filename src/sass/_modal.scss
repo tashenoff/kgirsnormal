@@ -9,26 +9,127 @@
     padding: 0 32px;
     font-weight: 600;
     font-family: "Noto Sans", sans-serif;
+    @media screen and (max-width: 600px) {
+      padding: 0 19px;
+    }
   }
 
   &__icon {
     width: 48px;
-    height: 48px;
+    height: 45px;
     display: block;
     background-size: 48px;
 
+    @media screen and (max-width: 600px) {
+      width: 32px;
+      height: 32px;
+      background-size: 33px;
+    }
+
     &--message {
       background-image: url("/img/modal/message_color.svg");
+    }
+
+    &--mail {
+      background-image: url("/img/modal/email_color.svg");
+    }
+
+    &--brain {
+      background-image: url("/img/modal/brain_color.svg");
+    }
+
+    &--locationcolor {
+      background-image: url("/img/modal/location_color.svg");
+    }
+
+    &--meeting {
+      background-image: url("/img/modal/meeting_color.svg");
+    }
+
+    &--paper {
+      background-image: url("/img/modal/paper_color.svg");
     }
   }
 }
 
 .modal-content {
+  .contact {
+    @extend .spiker;
+    &__item {
+      @extend .spiker__item;
+    }
+
+    &__title {
+      @extend .spiker__title;
+    }
+    &__desc {
+      @extend .spiker__desc;
+      word-wrap: break-word;
+    }
+  }
+
+  .spiker {
+    @extend .spiker;
+    &__item {
+      @extend .spiker__item;
+    }
+
+    &__title {
+      @extend .spiker__title;
+      font-size: 13px;
+      font-weight: 700;
+      color: #232323;
+      line-height: 1.2;
+      padding-bottom: 8px;
+    }
+    &__desc {
+      @extend .spiker__desc;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      max-width: 195px;
+      margin-bottom: 22px;
+
+      @media screen and (min-device-width: 320px) and (max-width: 410px) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      @media screen and (min-device-width: 375px) and (max-width: 667px) {
+        width: 160px;
+        max-width: 195px;
+      }
+    }
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 16px;
+  }
   p {
     color: #232323;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    margin-bottom: 8px;
+    a {
+      color: #717171;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 12;
+      line-height: 1.5;
+      margin: 6px;
+    }
   }
   &__title {
     border-bottom: 1px solid rgba(116, 181, 232, 0.5);
@@ -36,6 +137,12 @@
     display: flex;
     font-weight: 700;
     font-size: 16px;
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &:last-child {
       border-bottom: none;
     }
@@ -44,6 +151,9 @@
   &__time {
     padding-right: 54px;
     font-weight: 400;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 8px;
+    }
   }
 
   &__text {
@@ -58,9 +168,16 @@
   &__halftext {
     width: 50%;
 
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+
     &__wrapper {
       display: flex;
       padding-bottom: 24px;
+      @media screen and (max-width: 600px) {
+        flex-wrap: wrap;
+      }
 
       &:first-child {
         padding-top: 24px;
@@ -83,9 +200,14 @@
     padding: 16px 24px 0px 0px;
   }
 
-  @media screen and (max-width: 600px) {
-    left: calc(50% - 190px);
-    max-width: 380px;
-    padding: 20px;
+  @media screen and (min-device-width: 320px) and (max-width: 410px) {
+    left: calc(50% - 155px);
+    max-width: 310px;
+    padding: 16px;
+  }
+  @media screen and (min-device-width: 375px) and (max-width: 667px) {
+    left: calc(50% - 180px);
+    max-width: 360px;
+    padding: 16px;
   }
 }
